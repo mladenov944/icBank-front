@@ -1,0 +1,15 @@
+<form class="col s12 white" #userRegistrationForm ="ngForm"  (ngSubmit)="register(userRegistrationForm)">
+<div class="box">
+  <h1 class="vhod">Регистрационна форма </h1>
+  <input type="text" #firstName ngModel name="firstName" placeholder="Име" required class="email" />
+  <input type="text" #secondName ngModel name="secondName" placeholder="Презиме" required class="email" />
+  <input type="text" #surname ngModel name="surname" placeholder="Фамилия" required class="email" />
+  <input type="text" #username ngModel name="username" placeholder="Потребителско име" required class="email" />
+  <input type="password" #password ngModel name="password" placeholder="Парола" required class="email" />
+  <input type="text" #email ngModel name="email" placeholder="E-mail" required class="email" />
+  <div class="input-field col s12">
+      <button [disabled]="!userRegistrationForm.valid" class="email" type="submit">РЕГИСТРАЦИЯ</button>
+    </div>
+  <!-- <button [disabled]="true" class="email">РЕГИСТРАЦИЯ</button> -->
+</div> 
+</form>
