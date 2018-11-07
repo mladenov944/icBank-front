@@ -1,0 +1,23 @@
+<div class="row" *ngIf="userClaims">
+    <div class="col-md-8" >
+      <div class="row card card-block" >
+        <div class="col-md-6 form-group">
+          <label class="box">Потребител: {{userClaims.firstName}} {{userClaims.surname}} </label>
+        </div>
+        <div class="col-md-6 form-group">
+          <label class="box">IBAN на сметка : {{userClaims.iban}}</label>
+        </div>
+        <div class="col-md-4 form-group">
+          <label class="box">E-mail: {{userClaims.email}}</label>
+        </div>
+        <div class="col-md-4 form-group">
+          <label class="box">Салдо по сметка : {{userClaims.cash}}</label>
+      </div>
+      <div>
+          <button (click)="Logout()" class="box2">Изход</button>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-6 form-group">
+    <button (click)="transfer()" class="trans">Превод по сметка</button>
+  </div>

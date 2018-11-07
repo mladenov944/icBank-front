@@ -1,11 +1,9 @@
-<div *ngIf="isLoginError" class="red-text center error-message">
-    <i class="material-icons"></i> Incorrect username or password
-</div>
-<form #loginForm="ngForm" class="col s12 white" (ngSubmit)="login(username.value, password.value)">
-</form>
+<form class="col s12 white" #loginForm ="ngForm" (ngSubmit)="login(loginForm)">
 <div class="box">
 <h1 class="vhod">ВХОД В СИСТЕМАТА </h1>
 <input type="text" #username ngModel name="username" placeholder="Потребител" required class="email"  />
-<input type="text" #password ngModel name="password" placeholder="Парола" required  class="password" />
-<button (click)="login(username, password)" class="btn">ВХОД</button>
+<input type="password" #password ngModel name="password" placeholder="Парола" required  class="password" />
+<button [disabled]="!loginForm.valid" class="btn" type = "submit">ВХОД</button>
 <a href='/register'><div id="btn2"> РЕГИСТРАЦИЯ</div></a> 
+</div>
+</form>
