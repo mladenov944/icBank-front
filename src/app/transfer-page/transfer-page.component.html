@@ -1,0 +1,10 @@
+<form class="col s12 white" #transferForm ="ngForm"  (ngSubmit)="transfer(transferForm)">
+    <div class="box">
+      <h1 class="vhod">Превод по сметка </h1>
+      <input type="text" #iban ngModel name="iban" placeholder="IBAN на получател" required class="email" />
+      <input type="text" #amount ngModel name="amount" placeholder="Сума" required class="email" />
+      <div class="input-field col s12">
+          <button [disabled]="!transferForm.valid" class="email" type="submit">Направи превод</button>
+        </div>
+    </div> 
+    </form>
